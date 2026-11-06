@@ -69,16 +69,18 @@
       player.y = constrain(player.y, 0, height);
     }
 
-    function keyPressed() {
-      if (keyCode === UP_ARROW) player.y -= 25;
-      else if (keyCode === DOWN_ARROW) player.y += 25;
-      else if (keyCode === LEFT_ARROW) player.x -= 25;
-      else if (keyCode === RIGHT_ARROW) player.x += 25;
-      else if (key === 'w' || key === 'W') player.y -= 25;
-      else if (key === 's' || key === 'S') player.y += 25;
-      else if (key === 'a' || key === 'A') player.x -= 25;
-      else if (key === 'd' || key === 'D') player.x += 25;
-    }
+function keyPressed() {
+  let moveAmt = 25;
+  if (keyCode === UP_ARROW) player.y -= moveAmt;
+  else if (keyCode === DOWN_ARROW) player.y += moveAmt;
+  else if (keyCode === LEFT_ARROW) player.x -= moveAmt;
+  else if (keyCode === RIGHT_ARROW) player.x += moveAmt;
+
+  else if (key === 'w' || key === 'W') player.y -= moveAmt;
+  else if (key === 's' || key === 'S') player.y += moveAmt;
+  else if (key === 'a' || key === 'A') player.x -= moveAmt;
+  else if (key === 'd' || key === 'D') player.x += moveAmt;
+}
   </script>
 </body>
 </html>
